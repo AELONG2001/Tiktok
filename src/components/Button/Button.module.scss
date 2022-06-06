@@ -1,0 +1,84 @@
+.wrapper {
+    min-width: 100px;
+    padding: 9px 16px;
+    border-radius: 4px;
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid transparent;
+
+    + .wrapper {
+        margin-left: 8px;
+    }
+
+    &.disabled {
+        pointer-events: none;
+        user-select: none;
+        opacity: 0.5;
+    }
+}
+
+
+//Button types
+.rounded {
+    color: var(--black-color);
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-color: rgba(22, 24, 35, 0.12);
+
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.primary {
+    color: var(--white-color);
+    background-color: var(--primary);
+
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),#FE2C55;
+    }
+}
+
+.outline {
+    color: var(--primary);
+    border-color: var(--primary);
+
+    &:hover {
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+}
+
+.text {
+    color: var(--black-color);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+//Button sizes
+.small {
+  min-width: 88px;
+  padding: 4px 16px;
+}
+
+.large {
+    min-width: 132px;
+    padding: 14px 16px;
+}
+
+.left-icon, .right-icon {
+    text-align: start;
+    & svg {
+        width: 24px;
+    }
+}
+
+.left-icon ~ .title,
+.title ~ .right-icon {
+    margin-left: 8px;
+}

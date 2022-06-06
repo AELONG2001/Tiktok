@@ -1,13 +1,18 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,300;1,400;1,500&display=swap');
 
 :root {
   --primary: #fe2c55;
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #161823;
+
+  --font-family: 'ProximaNova', sans-serif;
 
   //Default layout
   --default-layout-header-width: 1150px;
   --default-layout-header-height: 60px;
   --default-layout-sidebar-width: 356px;
+  --default-layout-horizontal-spacer: 24px;
 }
 
 * {
@@ -17,12 +22,109 @@
 }
 
 html {
-  font: 62.5%;
+  font-size: 62.5%;
 }
 
+//Fonts embedded
+@font-face {
+  font-family: ProximaNova;
+  src: url('/assets/fonts/Proxima-Nova-Bold.woff');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: url('/assets/fonts/Proxima-Nova-Bold.woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: url('/assets/fonts/Proxima-Nova-Regular.woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: url('/assets/fonts/Proxima-Nova-Semibold.woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: SofiaPro;
+  src: url('/assets/fonts/sofiapro-bold.woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: SofiaPro;
+  src: url('/assets/fonts/sofiapro-semibold.otf');
+  font-weight: 400;
+}
+
+
 body {
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.6rem;
-    line-height: 1.5;
-    text-rendering: optimizeSpeed;
+  font-family: var(--font-family);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-y: overlay;
+}
+
+button, input, [tabIndex] {
+  border: none;
+  outline: none;
+}
+
+a[href] {
+  color: var(--text-color);
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+  padding-left: 0
+}
+
+p {
+  margin: 0;
+}
+
+//Custom tippy tooltip
+body .tippy-box {
+  background-color: #545454eb;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  line-height: 2.2 rem;
+ 
+  .tippy-content {
+    padding: 8px 9px;
+  }
+
+  .tippy-arrow {
+    color: #545454eb;
+    &::before {
+      top: -8px !important;
+    }
+  }
+}
+
+
+//Custom scrollbar
+html *::-webkit-scrollbar {
+  border-radius: 0;
+  width: 8px;
+}
+html *::-webkit-scrollbar {
+  border-radius: 0;
+  width: 8px;
+}
+html *::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .15);
+}
+
+html *::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
 }
