@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
@@ -15,5 +16,11 @@ function Header({ title, onBack }) {
         </header>
     );
 }
+
+// eslint-disable-next-line react/no-typos
+Header.PropTypes = {
+    title: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
+};
 
 export default Header;

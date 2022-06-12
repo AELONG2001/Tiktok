@@ -69,7 +69,20 @@ function Button({
 
 // eslint-disable-next-line react/no-typos
 Button.PropTypes = {
+    className: PropTypes.string,
+    to: PropTypes.string,
+    href: PropTypes.string,
+    primary: PropTypes.bool,
+    outline: PropTypes.bool,
+    text: PropTypes.bool,
+    rounded: PropTypes.bool,
+    large: PropTypes.bool,
+    small: PropTypes.bool,
+    disabled: PropTypes.bool,
+    leftIcon: PropTypes.node,
+    rightIcon: PropTypes.node,
     children: PropTypes.node.isRequired,
+    onClick: PropTypes.func,
 };
 
 export default Button;
