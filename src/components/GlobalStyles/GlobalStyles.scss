@@ -76,7 +76,7 @@ button, input, [tabIndex] {
   outline: none;
 }
 
-a[href] {
+a {
   color: var(--text-color);
   text-decoration: none;
   display: inline-block;
@@ -111,10 +111,6 @@ body .tippy-box {
 
 
 //Custom scrollbar
-html *::-webkit-scrollbar {
-  border-radius: 0;
-  width: 8px;
-}
 html *::-webkit-scrollbar {
   border-radius: 0;
   width: 8px;
